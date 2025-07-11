@@ -60,7 +60,7 @@
     margin-bottom: 0.5rem;
     color: #9ca3af;
     cursor: pointer;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .footer-contact li:hover {
