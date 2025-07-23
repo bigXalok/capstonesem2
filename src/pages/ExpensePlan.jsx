@@ -186,12 +186,9 @@ const ExpensePlan = () => {
           <h2>Expense Summary</h2>
           <div className="summary-cards">
             <div className="summary-card total">
-              <div className="summary-icon">
-                <DollarSign size={32} />
-              </div>
               <div className="summary-content">
                 <h3>Total Trip Cost</h3>
-                <p className="amount">${getTotalExpenses().toFixed(2)}</p>
+                <p className="amount">₹{getTotalExpenses().toFixed(2)}</p>
               </div>
             </div>
 
@@ -201,7 +198,7 @@ const ExpensePlan = () => {
               </div>
               <div className="summary-content">
                 <h3>Cost per Person</h3>
-                <p className="amount">${getPerPersonCost().toFixed(2)}</p>
+                <p className="amount">₹{getPerPersonCost().toFixed(2)}</p>
               </div>
             </div>
 
@@ -211,7 +208,7 @@ const ExpensePlan = () => {
               </div>
               <div className="summary-content">
                 <h3>Cost per Day</h3>
-                <p className="amount">${getPerDayCost().toFixed(2)}</p>
+                <p className="amount">₹{getPerDayCost().toFixed(2)}</p>
               </div>
             </div>
           </div>
