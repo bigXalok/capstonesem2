@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Mountain } from "lucide-react";
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Mountain } from 'lucide-react';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -8,29 +8,26 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/places", label: "Places" },
-    { path: "/stay", label: "Stay" },
-    { path: "/transport", label: "Transport" },
-    { path: "/expense-plan", label: "Expense Plan" },
+    { path: '/', label: 'Home' },
+    { path: '/transport', label: 'Transport' },
+    { path: '/stay', label: 'Stay' },
+    { path: '/places', label: 'Places' },
+    { path: '/expense-plan', label: 'Expense Plan' },
   ];
 
   return (
-    <nav className="navbar">
+    <nav className="nav">
       <div className="nav-container">
         <Link to="/" className="nav-brand">
-          <Mountain size={32} />
-          <span>WanderLand</span>
+          <span>TripUp</span>
         </Link>
 
-        <ul className={`nav-menu ${isMenuOpen ? "active" : ""}`}>
+        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
             <li key={item.path}>
               <Link
                 to={item.path}
-                className={`nav-link ${
-                  location.pathname === item.path ? "active" : ""
-                }`}
+                className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
@@ -41,7 +38,8 @@ const Navigation = () => {
 
         <button
           className="nav-toggle"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>

@@ -7,8 +7,7 @@ import Transport from './pages/Transport';
 import Stay from './pages/Stay';
 import Places from './pages/Places';
 import ExpensePlan from './pages/ExpensePlan';
-import './App.css';
-
+import "./index.css";
 function App() {
   return (
     <Router> 

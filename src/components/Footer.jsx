@@ -1,5 +1,4 @@
 import {
-  Mountain,
   Facebook,
   Twitter,
   Instagram,
@@ -16,11 +15,9 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <Mountain size={32} />
-              <span>WanderQuest</span>
+              <span>TripUp</span>
             </div>
             <p className="footer-description">
-              Your ultimate companion for unforgettable travel adventures.
               Discover new destinations,
               <br />
               plan your journey, and create memories that last a lifetime.
@@ -32,7 +29,7 @@ const Footer = () => {
             <h3>Contact Info</h3>
             <ul className="footer-contact">
               <li>
-                <Mail size={16} /> <span>info@WanderLand.com</span>
+                <Mail size={16} /> <span>travel@TripUp.com</span>
               </li>
               <li>
                 <Phone size={16} /> <span>+919988777111</span>
@@ -57,7 +54,7 @@ const Footer = () => {
 
 
         <div className="footer-bottom">
-          <p>&copy; 2025 WanderQuest. All rights reserved.</p>
+          <p>&copy; 2025 TripUp. All rights reserved.</p>
         </div>
       </div>
     </footer>

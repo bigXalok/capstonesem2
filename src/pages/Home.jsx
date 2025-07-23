@@ -5,7 +5,6 @@ import {
   MapPin,
   Calendar,
   Users,
-  ArrowRight,
   Star,
   Award,
   Globe,
@@ -30,19 +29,19 @@ const Home = () => {
       icon: <MapPin size={48} />,
       title: "Discover Places",
       description:
-        "Find the best travel routes tailored to your adventure style and preferences",
+        "Wherever you go, go the way that suits your spirit",
     },
     {
       icon: <Calendar size={48} />,
       title: "Plan Your Trip",
       description:
-        "Comprehensive planning tools for the perfect getaway with detailed itineraries",
+        "Everything you need for the perfect trip all in one place",
     },
     {
       icon: <Users size={48} />,
       title: "Local Guides",
       description:
-        "Connect with experienced local guides for authentic cultural experiences",
+        "Meet local guides who bring culture to life with real, authentic experiences",
     },
   ];
 
@@ -55,15 +54,14 @@ const Home = () => {
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">
-            Your Next Adventure
-            <span className="highlight"> Awaits</span>
+            Find your next <br/>
+            <span className="highlight">Escape</span>
           </h1>
           <p className="hero-subtitle">
-            Discover breathtaking destinations, plan unforgettable journeys, and create memories that last a lifetime.
+            Explore places. Live stories.
           </p>
           <div className="hero-buttons">
             <Link to="/places" className="hero-btn hero-btn-secondary">
@@ -73,14 +71,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Search Section */}
-      <section className="search-section">
+
+    <section className="search-section">
         <div className="search-container">
           <div className="search-header">
             <h2>Plan Your Perfect Trip</h2>
             <p>Start your adventure by telling us where you want to go</p>
           </div>
-
+          
           <form onSubmit={handleSearch} className="search-form">
             <div className="search-grid">
               <div className="form-group">
@@ -138,26 +136,6 @@ const Home = () => {
               </button>
             </div>
           </form>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features-section">
-        <div className="features-container">
-          <div className="features-header">
-            <h2>Why Choose WanderQuest?</h2>
-          </div>
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <div key={index} className="feature-card">
-                <div className="feature-icon" style={{ color: index === 0 ? '#1e40af' : index === 1 ? '#059669' : '#ea580c' }}>
-                  {feature.icon}
-                </div>
-                <h3 className="feature-title">{feature.title}</h3>
-                <p className="feature-description">{feature.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 

@@ -1,4 +1,3 @@
-/* Places Page Styles */
 
 .places-page {
     padding: 2rem 5rem;
@@ -22,7 +21,7 @@
 }
 
 
-/* Search Section */
+
 
 .search-section {
     display: flex;
@@ -96,7 +95,6 @@
 }
 
 
-/* Place Image */
 
 .place-image {
     position: relative;
@@ -131,7 +129,7 @@
 }
 
 
-/* Place Content */
+
 
 .place-content {
     padding: 1.5rem;
@@ -178,7 +176,6 @@
 }
 
 
-/* Place Details */
 
 .place-details {
     display: flex;
@@ -194,8 +191,6 @@
     font-size: 0.875rem;
 }
 
-
-/* Place Footer */
 
 .place-footer {
     display: flex;
