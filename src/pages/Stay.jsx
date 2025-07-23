@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Star, Search } from 'lucide-react';
 import tajImg from '../assets/taj1.jpg';
-import keralaImg from '../assets/kerala1.jpg';
+import keralaImg from '../assets/Kerala1.jpg';
 import rishi1Img from '../assets/Rishi1.jpg';
 import obera1Img from '../assets/oberoi1.jpg';
 import himalImg from '../assets/Himalayan1.jpg';
