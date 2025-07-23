@@ -5,7 +5,7 @@ import keralaImg from '../assets/Kerala1.jpg';
 import rishi1Img from '../assets/Rishi1.jpg';
 import obera1Img from '../assets/oberoi1.jpg';
 import himalImg from '../assets/Himalayan1.jpg';
-import hostelImg from '../assets/hosteller1.jpg';
+import hostelImg from '../assets/Hosteller1.jpg';
 import './Stay.css';
 
 const Stay = () => {
