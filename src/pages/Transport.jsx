@@ -1,6 +1,6 @@
 
 import { Plane, Train, Car, Ship, MapPin, Clock, DollarSign, Users, Calendar } from 'lucide-react';
-import './Transport.css';
+import '../Transport.css';
 import trainImg from '../assets/train1.jpg';
 import airImg from '../assets/airport.jpg';
 import carImg from '../assets/taxii.jpg';

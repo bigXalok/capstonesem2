@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MapPin, Star, Search } from 'lucide-react';
 import tajImg from '../assets/taj1.jpg';
 import keralaImg from '../assets/Kerala1.jpg';
