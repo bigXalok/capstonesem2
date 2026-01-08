@@ -231,19 +231,27 @@
 }
 
 @media (max-width: 768px) {
+    .stay-page {
+        padding: 1rem;
+    }
+
     .accommodations-grid {
         grid-template-columns: 1fr;
     }
+
     .search-container {
         padding: 0 0.5rem;
     }
+
     .accommodation-footer {
         flex-direction: column;
         align-items: stretch;
     }
+
     .action-buttons {
         justify-content: space-between;
     }
+
     .action-buttons .btn {
         flex: 1;
     }

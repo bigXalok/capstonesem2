@@ -1,47 +1,79 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Mountain } from 'lucide-react';
+import { FaPlane, FaBars, FaTimes } from 'react-icons/fa';
 import './Navigation.css';
 
 const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/transport', label: 'Transport' },
-    { path: '/stay', label: 'Stay' },
-    { path: '/places', label: 'Places' },
-    { path: '/expense-plan', label: 'Expense Plan' },
-  ];
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className="nav">
       <div className="nav-container">
-        <Link to="/" className="nav-brand">
-          <span>TripUp</span>
+        <Link to="/" className="nav-brand" onClick={closeMobileMenu}>
+          <FaPlane size={24} />
+          <span>TravelGo</span>
         </Link>
 
-        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          {navItems.map((item) => (
-            <li key={item.path}>
-              <Link
-                to={item.path}
-                className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <button
-          className="nav-toggle"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        <button className="nav-toggle" onClick={toggleMobileMenu} aria-label="Toggle navigation">
+          {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
+
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+          <li>
+            <Link
+              to="/"
+              className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/transport"
+              className={`nav-link ${location.pathname === '/transport' ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Transport
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/stay"
+              className={`nav-link ${location.pathname === '/stay' ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Stay
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/places"
+              className={`nav-link ${location.pathname === '/places' ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Places
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/expense-plan"
+              className={`nav-link ${location.pathname === '/expense-plan' ? 'active' : ''}`}
+              onClick={closeMobileMenu}
+            >
+              Expense Plan
+            </Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
