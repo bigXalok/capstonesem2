@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <span>TripUp</span>
+              <span>TravelGo</span>
             </div>
             <p className="footer-description">
               Discover new destinations,
@@ -29,13 +29,13 @@ const Footer = () => {
             <h3>Contact Info</h3>
             <ul className="footer-contact">
               <li>
-                <Mail size={16} /> <span>travel@TripUp.com</span>
+                <Mail size={16} /> <span>travel@TravelGo.com</span>
               </li>
               <li>
                 <Phone size={16} /> <span>+919988777111</span>
               </li>
               <li>
-                <MapPin size={16} /> <span>123 Adventure St, Travel City</span>
+                <MapPin size={16} /> <span>123 Mumbai, Travel City</span>
               </li>
             </ul>
             <div className="footer-social">
